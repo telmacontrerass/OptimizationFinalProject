@@ -1,0 +1,26 @@
+{
+    "source": "https://huggingface.co/datasets/withmartian/routerbench",
+    "source_file": "routerbench_0shot.pkl",
+    "random_seed": 42,
+    "estimation_fraction_target": 0.8,
+    "split_method": "Random split within each benchmark",
+    "category_mapping": {
+        "mmlu-elementary-mathematics": "mathematics",
+        "mmlu-high-school-mathematics": "mathematics",
+        "mmlu-college-mathematics": "mathematics",
+        "mmlu-abstract-algebra": "mathematics",
+        "mbpp": "programming",
+        "arc-challenge": "science"
+    },
+    "selected_models": [
+        "gpt-3.5-turbo-1106",
+        "gpt-4-1106-preview",
+        "mistralai/mixtral-8x7b-chat"
+    ],
+    "duplicate_rule": "Keep first exact prompt after stripping whitespace",
+    "duplicates_removed": 2,
+    "quality_measure": "Mean binary score",
+    "category_weighting": "Equal weight per estimation sample",
+    "cost_measure": "Mean recorded benchmark cost per query",
+    "cost_currency": "Pending verification from source documentation"
+}
